@@ -2,6 +2,12 @@
 
 Route::middleware(['runall', 'locale'])->group(function () {
     Route::get('/', 'MainController@getHome')->name('getHome');
+    Route::get('clear-cache', function () {
+        \Artisan::call('cache:clear');
+        \Artisan::call('route:cache');
+        \Artisan::call('config:cache');
+        return \Artisan::output();
+    });
     Route::get('change-language/{language}', 'MainController@changeLanguage')->name('user.change-language');
     Auth::routes();
 
