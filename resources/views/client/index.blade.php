@@ -12,9 +12,11 @@
                         <div class="banner-info">
                             <div class="container">
                                 <div class="banner-info-bg mr-auto">
-                                    <h5>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ</h5>
+                                    <h5>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ
+                                    </h5>
                                     <!-- <p>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ</p> -->
-                                    <a class="btn btn-theme2 mt-md-5 mt-4" href="{{ url('lien-he') }}"> Liên hệ</a>
+                                    <a class="btn btn-theme2 mt-md-5 mt-4"
+                                        href="{{ url('lien-he') }}"> Liên hệ</a>
                                 </div>
                             </div>
                         </div>
@@ -27,9 +29,11 @@
                         <div class="banner-info">
                             <div class="container">
                                 <div class="banner-info-bg mr-auto">
-                                    <h5>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ</h5>
+                                    <h5>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ
+                                    </h5>
                                     <!-- <p>Kiến tạo thế giới hòa bình thịnh vượng thông qua giáo dục sức khỏe và công nghệ</p> -->
-                                    <a class="btn btn-theme2 mt-md-5 mt-4" href="{{ url('lien-he') }}"> Liên hệ</a>
+                                    <a class="btn btn-theme2 mt-md-5 mt-4"
+                                        href="{{ url('lien-he') }}"> Liên hệ</a>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +87,9 @@
                 <div class="column color-2 editContentc col-lg-4 ">
                     <div>
                         <h4 class=" editContent">Hoa Ô Rô</h4>
-                        <p class="para editContent">Hoa Ô Rô là thương hiệu giáo dục sức khỏe và công nghệ với đội ngũ các chuyên gia dinh dưỡng, thanh lọc cơ thể liên kết cùng các tổ chức và viện khoa học dinh dưỡng và chữa lành tự nhiên uy tín được chứng nhận hàng đầu thế giới.</p>
+                        <p class="para editContent">Hoa Ô Rô là thương hiệu giáo dục sức khỏe và công nghệ với đội ngũ
+                            các chuyên gia dinh dưỡng, thanh lọc cơ thể liên kết cùng các tổ chức và viện khoa học dinh
+                            dưỡng và chữa lành tự nhiên uy tín được chứng nhận hàng đầu thế giới.</p>
                         <!-- <a href="gioi-thieu" class="action-button btn mt-3">Read more</a> -->
                     </div>
                 </div>
@@ -97,7 +103,7 @@
                 <div class="img-box col-lg-4 col-md-6">
                     <img src="{{ asset('public/assets/images/6.jpg') }}" alt="product"
                         class="img-responsive ">
-                    <h5 class="my-2"><a href="gioi-thieu">Tầm nhìn</a></h5>
+                    <h5 class="my-2"><a href="gioi-thieu">{{ __('i18n.vision') }}</a></h5>
                     <!-- <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet itaque labor.</p> -->
                 </div>
             </div>
@@ -110,18 +116,17 @@
         <div class="container">
             <div class="row">
                 <div class="column2 image-text col-xl-6">
-                    <h3 class="team-head editContent">Thực phẩm hữu cơ</h3>
+                    <h3 class="team-head editContent">{{ __('i18n.advice_title') }}</h3>
                     <div class="team-two">
                         <div class="nature-row">
-                            <h5><a href="#page">
-                                    Lời khuyên</a></h5>
+                            <h5><a href="#page">{{ __('i18n.advice1_title') }}</a></h5>
                             <p class="para editContent text ">
-                            Chúng tôi khuyên và tư vấn khách hàng sử dụng các sản phẩm thuần thực vật hữu cơ địa phương tại Việt Nam để chữa lành các vấn đề sức khỏe của mình.Với tiêu chuẩn 5 không: Không hóa chất, Không phẫu thuật xâm lấn, Không thực phẩm bổ sung, Không chất hóa học, Không biến đổi gen</p>
+                                {{ __('i18n.advice1_body') }}</p>
                         </div>
                         <div class="nature-row">
-                            <h5><a href="#page">Fresh Fruits</a></h5>
+                            <h5><a href="#page">{{ __('i18n.advice2_title') }}</a></h5>
                             <p class="para editContent text ">
-                            Chúng tôi luôn sáng tạo ra các công thức dùng hoàn toàn các loại rau quả nhiệt đới ngay tại quê nhà Việt Nam, góp phần bảo vệ địa cầu và ủng hộ nông nghiệp hữu cơ bền vững</p>
+                                {{ __('i18n.advice2_body') }}</p>
                         </div>
                     </div>
                 </div>
@@ -193,7 +198,8 @@
                     <div class="d-grid hh14-text">
                         <div class="hh14-info">
 
-                            <p class="para">Sau liệu trình 7 ngày tôi giảm được 3 kí, vòng eo giảm 3cm, và tôi cảm thấy khỏe hơn rất nhiều. Hoa Ô Rô giúp tôi đạt được mục tiêu hơn cả kì vọng.</p>
+                            <p class="para">Sau liệu trình 7 ngày tôi giảm được 3 kí, vòng eo giảm 3cm, và tôi cảm thấy
+                                khỏe hơn rất nhiều. Hoa Ô Rô giúp tôi đạt được mục tiêu hơn cả kì vọng.</p>
                             <div class="client-name">
                                 <img src="{{ asset('public/assets/images/c1.jpg') }}"
                                     alt="product" class="img-responsive ">
@@ -208,7 +214,8 @@
                     <div class="d-grid hh14-text">
                         <div class="hh14-info">
 
-                            <p class="para">Mình đã giảm ngay được 2 ký sau 6 ngày áp dung liệu trình detox, giờ đây cơ thể lại tự động thích nghi với việc ăn nhiều trái cây và da sáng lên rõ.</p>
+                            <p class="para">Mình đã giảm ngay được 2 ký sau 6 ngày áp dung liệu trình detox, giờ đây cơ
+                                thể lại tự động thích nghi với việc ăn nhiều trái cây và da sáng lên rõ.</p>
                             <div class="client-name">
                                 <img src="{{ asset('public/assets/images/c2.jpg') }}"
                                     alt="product" class="img-responsive ">
@@ -222,7 +229,10 @@
                     <div class="d-grid hh14-text">
                         <div class="hh14-info">
 
-                            <p class="para">Mình bị đau bao tử do căng thẳng nhiều năm, trước khi thanh lọc cơ thể bằng nước ép mình lo lắm, lo sẽ bị nặng thêm do ngĩ rằng uống nước trái cây sẽ làm đau bao tử, nhưng sau 1 liệu trình 21 ngày, mình cảm thấy nhẹ nhàng hơn rất nhiều, da cũng đẹp hơn nữa.</p>
+                            <p class="para">Mình bị đau bao tử do căng thẳng nhiều năm, trước khi thanh lọc cơ thể bằng
+                                nước ép mình lo lắm, lo sẽ bị nặng thêm do ngĩ rằng uống nước trái cây sẽ làm đau bao
+                                tử, nhưng sau 1 liệu trình 21 ngày, mình cảm thấy nhẹ nhàng hơn rất nhiều, da cũng đẹp
+                                hơn nữa.</p>
                             <div class="client-name">
                                 <img src="{{ asset('public/assets/images/c3.jpg') }}"
                                     alt="product" class="img-responsive ">
@@ -247,22 +257,22 @@
                         class="img-responsive ">
                 </div>
                 <div class="col-xl-6 about-right-faq align-self">
-                   
+
                     <div class="call-grids-w3 d-grid">
                         <div class="grids-1 grids-effect">
                             <a href="#more"><span class="fa fa-pagelines"></span></a>
-                            <h4><a href="#feature" class="title-head">Giảm cân thần tốc an toàn:</a></h4>
-                            <p class="para">Tư vấn dinh dưỡng <br/>
-7 ngày giảm 2 kg<br/>
-Cam kết hoàn tiền nếu không hiệu quả</p>
-
+                            <h4><a href="#feature" class="title-head">{{ __('i18n.sv1_title') }}</a>
+                            </h4>
+                            <p class="para">{{ __('i18n.sv11') }} <br />
+                                {{ __('i18n.sv12') }}<br />
+                                {{ __('i18n.sv13') }}</p>
                         </div>
                         <div class="grids-1 grids-effect-2">
                             <a href="#more"><span class="fa fa-apple"></span></a>
-                            <h4><a href="#feature" class="title-head">Điều trị các bệnh mãn tính:</a></h4>
-                            <p class="para">Tim mạch, tiểu đường, huyết áp,suy thận.<br/>
-Cam kết khỏi trong 3 tháng </p>
-
+                            <h4><a href="#feature" class="title-head">{{ __('i18n.sv2_title') }}</a>
+                            </h4>
+                            <p class="para">{{ __('i18n.sv21') }}<br />
+                                {{ __('i18n.sv22') }} </p>
                         </div>
                     </div>
                 </div>

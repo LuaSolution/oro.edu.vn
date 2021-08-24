@@ -11,12 +11,12 @@ Author URL: http://w3layouts.com
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Hoa Ô Rô</title>
-  <link rel="shortcut icon" href="{{asset('public/img/logo.png')}}" type="image/x-icon">
-<link rel="icon" href="{{asset('public/img/logo.png')}}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ asset('public/img/logo.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ asset('public/img/logo.png') }}" type="image/x-icon">
   <!-- Template CSS -->
   <link href="{{ asset('public/assets/css/style-starter.css') }}" type="text/css"
     rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -26,8 +26,8 @@ Author URL: http://w3layouts.com
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
           <h1>
-          <a class="navbar-brand" href="{{ route('getHome') }}">
-          <img style="height: 60px" src="{{asset('public/img/logo2.png')}}" alt=""></a></h1>
+            <a class="navbar-brand" href="{{ route('getHome') }}">
+              <img style="height: 60px" src="{{ asset('public/img/logo2.png') }}" alt=""></a></h1>
           <button class="navbar-toggler bg-gradient collapsed" type="button" data-toggle="collapse"
             data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa icon-expand fa-bars"></span>
@@ -37,7 +37,8 @@ Author URL: http://w3layouts.com
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav  ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('getHome') }}">Trang chủ <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('getHome') }}">Trang chủ <span
+                    class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url('gioi-thieu') }}">Giới thiệu</a>
@@ -49,7 +50,13 @@ Author URL: http://w3layouts.com
                 <a class="nav-link" href="{{ url('tin-tuc') }}">Bài viết</a>
               </li>
             </ul>
-            <a href="{{ url('lien-he') }}" class="ml-lg-3 mt-lg-0 mt-3 book btn btn-style">Liên hệ</a>
+            @if(app()->getLocale() == 'en')
+              <a href="{!! route('user.change-language', ['vi']) !!}"
+                class="ml-lg-3 mt-lg-0 mt-3 book btn btn-style">VI</a>
+            @else
+              <a href="{!! route('user.change-language', ['en']) !!}"
+                class="ml-lg-3 mt-lg-0 mt-3 book btn btn-style">EN</a>
+            @endif
           </div>
       </div>
 
@@ -88,26 +95,28 @@ Author URL: http://w3layouts.com
               <li><a href="#">90 Lê Thị Riêng, quận 1, Tp.HCM</a></li>
               <li><a href="#">0933173916</a></li>
               <li><a href="https://www.facebook.com/Hoa-O%CC%82-Ro%CC%82-Edu-Wellness-100568718767864">
-              Facebook: Hoa Ô Rô Edu & Wellness</a></li>
+                  Facebook: Hoa Ô Rô Edu & Wellness</a></li>
               <li><a href="{{ url('lien-he') }}">Liên hệ</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-6 footer-list-29 footer-3">
             <h6 class="footer-title-29">Bài viết mới</h6>
-<?php
+            <?php
 $list = \App\News::get2News();
 ?>
-@foreach($list as $item)
-            <div class="footer-post mb-3">
-              <a href="{{route('getNews', ['news' => $item->slug])}}">
-                <img src="{{asset('public/img/post/'.$item->cover)}}" class="img-responsive"
-                  alt=""></a>
-              <div>
-                <a href="{{route('getNews', ['news' => $item->slug])}}">{{$item->title}}</a>
-                <p class="small"><span class="fa fa-clock-o"></span> {{$item->created_at}}</p>
+            @foreach($list as $item)
+              <div class="footer-post mb-3">
+                <a
+                  href="{{ route('getNews', ['news' => $item->slug]) }}">
+                  <img src="{{ asset('public/img/post/'.$item->cover) }}"
+                    class="img-responsive" alt=""></a>
+                <div>
+                  <a
+                    href="{{ route('getNews', ['news' => $item->slug]) }}">{{ $item->title }}</a>
+                  <p class="small"><span class="fa fa-clock-o"></span> {{ $item->created_at }}</p>
+                </div>
               </div>
-            </div>
-@endforeach
+            @endforeach
           </div>
         </div>
       </div>

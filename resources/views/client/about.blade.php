@@ -13,8 +13,8 @@
             </div>
             <div class="breadcrumbs-sub">
                 <ul class="breadcrumbs-custom-path">
-                    <li class="right-side propClone"><a href="{{ route('getHome') }}" class="editContent">Trang chủ <span
-                                class="fa fa-angle-right" aria-hidden="true"></span></a>
+                    <li class="right-side propClone"><a href="{{ route('getHome') }}"
+                            class="editContent">Trang chủ <span class="fa fa-angle-right" aria-hidden="true"></span></a>
                         <p>
                     </li>
                     <li class="active editContent">Giới thiệu</li>
@@ -38,8 +38,9 @@
                 <div class="cwp4-text col-xl-6 ">
                     <div class="posivtion-grid">
                         <h6 class="sub-title">Giới thiệu</h6>
-                        <h3 class="editContent">SỨC KHỎE LÀ NỀN TẢNG CỦA CUỘC SỐNG, MỤC TIÊU CỦA CHÚNG TÔI LÀ CỦNG CỐ NỀN TẢNG CHO KHÁCH HÀNG. </h3>
-                        <p class="para editContent">Tư vấn, đinh hướng và huấn luện sức khỏe một cách khoa học, chúng tôi hoạt động với cam kết mang lại kết quả cứu song khách hàng và sinh mệnh của loài đồng cư cùng cuộc song bền vững của các thế hệ tương lai.
+                        <h3 class="editContent">{{ __('i18n.gt_title') }}</h3>
+                        <p class="para editContent">
+                            {{ __('i18n.gt_body') }}
                         </p>
                         <a href="{{ url('tin-tuc') }}" class="action-button btn mt-3">Xem thêm</a>
                     </div>
@@ -63,16 +64,14 @@
     <div class="jst-two-col">
         <div class="container">
             <div class="row">
-
                 <div class="my-bio col-xl-6">
-                    <h3>Our Experience</h3>
-                    <p class="para mb-3">Kinh nghiệm giảm cân cho khách hàng, giúp khách hàng hài lòng 100%
-                    <br/>
-                    Giảm cân<br/>
-Giảm tỉ lệ mỡ<br/>
-Ngủ ngon<br/>
-Eo thon<br/>
-Da sáng mịn</p>
+                    <h3>{{ __('i18n.kn_title') }}</h3>
+                    <p class="para mb-3">{{ __('i18n.kn0') }}<br />
+                        {{ __('i18n.kn1') }}<br />
+                        {{ __('i18n.kn2') }}<br />
+                        {{ __('i18n.kn3') }}<br />
+                        {{ __('i18n.kn4') }}<br />
+                        {{ __('i18n.kn5') }}</p>
                 </div>
                 <div class="col-xl-6 ">
                     <img src="{{ asset('public/assets/images/b4.jpg') }}" alt="product"
@@ -95,34 +94,34 @@ Da sáng mịn</p>
                             <div class="team-content">
                                 <h3 class="name"><a href="#page">Linh Giang Bui</a></h3>
                                 <span class="post"><a href="#page">Certified Juice Therapist and Nutritionist</a></span>
-                                    </a>
-                                    <!-- <div class="social-teams">
+                        </a>
+                        <!-- <div class="social-teams">
                                         <a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
                                         <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
                                         <a href="#" class="pinterest"><span class="fa fa-pinterest"></span></a>
                                     </div> -->
-                            </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 team-team">
-                    <div class="our-team">
-                        <a href="#page">
-                            <img src="{{ asset('public/assets/images/t2.jpg') }}" alt="product"
-                                class="img-responsive ">
-                            <div class="team-content">
-                                <h3 class="name"><a href="#page">Hanna Larsen</a></h3>
-                                <span class="post"><a href="#page">Certified Natural Healer</a></span>
-                                    </a>
-                                    <!-- <div class="social-teams">
-                                        <a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
-                                        <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
-                                        <a href="#" class="pinterest"><span class="fa fa-pinterest"></span></a>
-                                    </div> -->
-                            </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 team-team">
+                <div class="our-team">
+                    <a href="#page">
+                        <img src="{{ asset('public/assets/images/t2.jpg') }}" alt="product"
+                            class="img-responsive ">
+                        <div class="team-content">
+                            <h3 class="name"><a href="#page">Hanna Larsen</a></h3>
+                            <span class="post"><a href="#page">Certified Natural Healer</a></span>
+                    </a>
+                    <!-- <div class="social-teams">
+                                        <a href="#" class="facebook"><span class="fa fa-facebook"></span></a>
+                                        <a href="#" class="twitter"><span class="fa fa-twitter"></span></a>
+                                        <a href="#" class="pinterest"><span class="fa fa-pinterest"></span></a>
+                                    </div> -->
+                </div>
+            </div>
         </div>
+    </div>
+    </div>
     </div>
     </div>
     <!-- /team-grids -->
